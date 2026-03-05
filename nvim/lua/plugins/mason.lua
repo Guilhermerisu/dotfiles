@@ -21,10 +21,8 @@ return {
     }
   },
   {
-  "neovim/nvim-lspconfig",
-  opts = {
-    -- This is the specific flag for the LSP provider
-    autoformat = false,
-  },
-}
+    "neovim/nvim-lspconfig",
+    opts = {
+    },
+  }
 }

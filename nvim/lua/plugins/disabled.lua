@@ -6,7 +6,6 @@ return {
   { "catppuccin/nvim",          name = "catppuccin", enabled = false },
 
   -- Formatting & Search
-  { "stevearc/conform.nvim",    enabled = false },
   { "MagicDuck/grug-far.nvim",  enabled = false },
 
   -- Session & Comments
