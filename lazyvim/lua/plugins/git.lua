@@ -6,7 +6,23 @@ return {
       current_line_blame = true, -- PERMANENT BLAME ACTIVE
       current_line_blame_opts = {
         delay = 100,
-        virt_text_pos = 'eol',
+        virt_text_pos = "eol",
+      },
+    },
+    keys = {
+      {
+        "<leader>hn",
+        function()
+          require("gitsigns").nav_hunk("next")
+        end,
+        desc = "Next Git Hunk",
+      },
+      {
+        "<leader>hp",
+        function()
+          require("gitsigns").nav_hunk("prev")
+        end,
+        desc = "Prev Git Hunk",
       },
     },
   },
