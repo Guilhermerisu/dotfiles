@@ -4,10 +4,10 @@ vim.pack.add({
 
 local wk = require("which-key")
 
-wk.setup({
-  preset = "modern",
-})
+ wk.setup({
+  preset = "helix",
+ })
 
 wk.add({
-  { "<leader>g", group = "git", icon = "" },
+  { "<leader>g", group = "git", icon = {icon = "", color = "red"}},
 })
