@@ -1,5 +1,6 @@
 vim.pack.add({
   { src = "https://github.com/folke/tokyonight.nvim" },
+  { src = "https://github.com/echasnovski/mini.icons" },
 })
 
 require("tokyonight").setup({
@@ -12,4 +13,5 @@ require("tokyonight").setup({
   },
 })
 
+require("mini.icons").setup()
 vim.cmd.colorscheme("tokyonight-night")
