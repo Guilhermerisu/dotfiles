@@ -50,3 +50,15 @@ require("snacks").setup({
   },
 
 })
+
+vim.keymap.set("n", "<leader>fe", function()  Snacks.explorer() end, { desc = "File Explorer" })
+
+vim.keymap.set("n", "<leader>ff", function() Snacks.picker.smart() end, { desc = "Smart Find Files" })
+
+vim.keymap.set("n", "<leader>fg", function() Snacks.picker.grep() end, { desc = "Grep" })
+
+vim.keymap.set("n", "<leader>fr", function() Snacks.picker.recent() end, { desc = "Recent Files" })
+
+vim.keymap.set("n", "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config"), }) end, { desc = "Find Config File" })
+
+vim.keymap.set({ "n", "x" }, "<leader>fw", function() Snacks.picker.grep_word() end, { desc = "Grep Word / Selection" })
