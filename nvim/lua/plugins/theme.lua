@@ -1,6 +1,6 @@
 vim.pack.add({
-  { src = "https://github.com/folke/tokyonight.nvim" },
   { src = "https://github.com/echasnovski/mini.icons" },
+  { src = "https://github.com/folke/tokyonight.nvim" },
 })
 
 require("tokyonight").setup({
@@ -12,6 +12,7 @@ require("tokyonight").setup({
     floats = "transparent",
   },
 })
-
 require("mini.icons").setup()
+MiniIcons.mock_nvim_web_devicons()
+
 vim.cmd.colorscheme("tokyonight-night")
