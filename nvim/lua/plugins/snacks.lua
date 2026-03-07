@@ -69,20 +69,27 @@ require("snacks").setup({
 		},
 	},
 })
+local function here()
+	return { cwd = vim.fn.expand("%:p:h") }
+end
 
 vim.keymap.set("n", "<leader>fe", function()
-	Snacks.explorer()
+	Snacks.explorer(here())
 end, { desc = "File Explorer" })
 
 vim.keymap.set("n", "<leader>ff", function()
-	Snacks.picker.smart()
-end, { desc = "Smart Find Files" })
+	Snacks.picker.smart(here())
+end, { desc = "Find Files" })
 
 vim.keymap.set("n", "<leader>fg", function()
-	Snacks.picker.grep()
+	Snacks.picker.grep(here())
 end, { desc = "Grep" })
 
 vim.keymap.set("n", "<leader>fp", function()
+	Snacks.picker.files({ cwd = "~/projects" })
+end, { desc = "Find Files Projects" })
+
+vim.keymap.set("n", "<leader>fP", function()
 	Snacks.picker.grep({ cwd = "~/projects" })
 end, { desc = "Grep Projects" })
 
