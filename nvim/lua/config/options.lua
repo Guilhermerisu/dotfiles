@@ -14,3 +14,6 @@ opt.termguicolors = true
 opt.signcolumn = "yes"
 
 opt.clipboard = "unnamedplus"
+
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
