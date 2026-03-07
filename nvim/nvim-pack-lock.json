@@ -24,6 +24,10 @@
       "rev": "fdd3f91800b3983e27bc9fcfb99cfa7293d7f11a",
       "src": "https://github.com/kawre/leetcode.nvim"
     },
+    "lualine.nvim": {
+      "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
     "mason-lspconfig.nvim": {
       "rev": "a324581a3c83fdacdb9804b79de1cbe00ce18550",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
