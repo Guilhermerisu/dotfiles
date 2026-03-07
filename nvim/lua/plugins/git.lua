@@ -29,3 +29,7 @@ end, { desc = "Reset hunk" })
 require("codediff").setup()
 
 vim.keymap.set("n", "<leader>gh", "<cmd>CodeDiff<CR>", { desc = "Open diffs" })
+
+vim.keymap.set("n", "<leader>gg", function()
+	Snacks.lazygit()
+end, { desc = "Lazygit" })
