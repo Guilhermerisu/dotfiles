@@ -10,6 +10,8 @@ local wk = require("which-key")
 })
 
 wk.add({
-  { "<leader>f", group = "find", icon = {icon = "󰉋", color = "yellow"}},
+  { "<leader>f", group = "find", icon = "📁"},
   { "<leader>g", group = "git", icon = {icon = "", color = "red"}},
+  { "<leader>u", group = "Undo", icon = "🌱" },
+  { "<leader>x", group = "Problems", icon = "⚒️" },
 })

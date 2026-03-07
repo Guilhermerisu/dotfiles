@@ -64,12 +64,10 @@ vim.lsp.enable({
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(event)
-    local opts = { buffer = event.buf }
-
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", "<leader>xd", vim.lsp.buf.definition, { buffer = event.buf, desc = "LSP Definition" })
+    vim.keymap.set("n", "<leader>xr", vim.lsp.buf.references, { buffer = event.buf, desc = "LSP References" })
+    vim.keymap.set("n", "<leader>xk", vim.lsp.buf.hover, { buffer = event.buf, desc = "LSP Hover Docs" })
+    vim.keymap.set("n", "<leader>xn", vim.lsp.buf.rename, { buffer = event.buf, desc = "LSP Rename Symbol" })
+    vim.keymap.set("n", "<leader>xa", vim.lsp.buf.code_action, { buffer = event.buf, desc = "LSP Code Action" })
   end,
 })
