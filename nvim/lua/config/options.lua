@@ -18,6 +18,9 @@ opt.clipboard = "unnamedplus"
 opt.undofile = true
 opt.undodir = vim.fn.stdpath("state") .. "/undo"
 
+opt.showmode = false
+opt.cmdheight = 0
+
 vim.diagnostic.config({
 	signs = {
 		text = {
