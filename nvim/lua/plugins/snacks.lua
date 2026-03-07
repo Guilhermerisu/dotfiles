@@ -69,20 +69,30 @@ require("snacks").setup({
 		},
 	},
 })
-local function here()
-	return { cwd = vim.fn.expand("%:p:h") }
+
+local function project_root()
+	local file = vim.api.nvim_buf_get_name(0)
+	local dir = vim.fn.fnamemodify(file, ":h")
+
+	local git = vim.fn.systemlist("git -C " .. dir .. " rev-parse --show-toplevel")[1]
+
+	if git and git ~= "" then
+		return git
+	end
+
+	return dir
 end
 
 vim.keymap.set("n", "<leader>fe", function()
-	Snacks.explorer(here())
+	Snacks.explorer({ cwd = project_root() })
 end, { desc = "File Explorer" })
 
 vim.keymap.set("n", "<leader>ff", function()
-	Snacks.picker.smart(here())
+	Snacks.picker.smart({ cwd = project_root() })
 end, { desc = "Find Files" })
 
 vim.keymap.set("n", "<leader>fg", function()
-	Snacks.picker.grep(here())
+	Snacks.picker.grep({ cwd = project_root() })
 end, { desc = "Grep" })
 
 vim.keymap.set("n", "<leader>fp", function()
