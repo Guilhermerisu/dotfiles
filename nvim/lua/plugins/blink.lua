@@ -1,21 +1,25 @@
 vim.pack.add({
-  {
-    src = "https://github.com/Saghen/blink.cmp",
-  },
+	{
+		src = "https://github.com/Saghen/blink.cmp",
+		version = vim.version.range("*"),
+	},
 })
 
 require("blink.cmp").setup({
-  keymap = {
-    preset = "default",
-  },
+	keymap = {
+		preset = "default",
+	},
 
-  completion = {
-    documentation = {
-      auto_show = true,
-    },
-  },
+	completion = {
+		documentation = {
+			auto_show = true,
+		},
+	},
 
-  sources = {
-    default = { "lsp", "path", "buffer" },
-  },
+	sources = {
+		default = { "lsp", "path", "buffer" },
+	},
+	fuzzy = {
+		implementation = "prefer_rust",
+	},
 })
